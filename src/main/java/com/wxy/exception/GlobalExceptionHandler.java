@@ -17,6 +17,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler()
     @ResponseBody
     public ApiResponse exceptionHandle(Exception e) {
-        return ApiResponse.error(500, e.getMessage(),null);
+        log.error("查询异常：{}",e.getMessage());
+        return ApiResponse.error(500,"查询异常",null);
     }
 }

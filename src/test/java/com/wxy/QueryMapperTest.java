@@ -16,7 +16,7 @@ import java.util.Map;
  **/
 @SpringBootTest
 @Slf4j
-public class BaseMapperTest {
+public class QueryMapperTest {
 
     @Autowired
     private QueryMapper queryMapper;
