@@ -1,6 +1,6 @@
 package com.wxy.config;
 
-import com.wxy.mapper.BaseMapper;
+import com.wxy.mapper.QueryMapper;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Configuration;
 
@@ -10,6 +10,6 @@ import org.springframework.context.annotation.Configuration;
  * @Description TODO 配置包扫描路径
  **/
 @Configuration
-@MapperScan(basePackageClasses = BaseMapper.class)
+@MapperScan(basePackageClasses = QueryMapper.class)
 public class MapperConfig {
 }

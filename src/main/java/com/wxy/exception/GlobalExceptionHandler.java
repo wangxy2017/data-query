@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @ControllerAdvice
 @Slf4j
 public class GlobalExceptionHandler {
-    @ExceptionHandler(Exception.class)
+    @ExceptionHandler()
     @ResponseBody
     public ApiResponse exceptionHandle(Exception e) {
         return ApiResponse.error(500, e.getMessage(),null);

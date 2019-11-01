@@ -1,6 +1,6 @@
 package com.wxy.controller;
 
-import com.wxy.mapper.BaseMapper;
+import com.wxy.mapper.QueryMapper;
 import com.wxy.response.ApiResponse;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -16,16 +16,16 @@ import org.springframework.web.bind.annotation.RestController;
  **/
 @Api(description = "查询入口")
 @RestController
-@RequestMapping("/api")
-public class BaseController {
+@RequestMapping("/query")
+public class QueryController {
 
     @Autowired
-    private BaseMapper baseMapper;
+    private QueryMapper queryMapper;
 
     @ApiOperation(value = "查询列表", notes = "查询列表")
-    @GetMapping("/queryList")
+    @GetMapping("/list")
     public ApiResponse queryList() {
-        return ApiResponse.success(baseMapper.queryList());
+        return ApiResponse.success(queryMapper.queryList());
     }
 
 }

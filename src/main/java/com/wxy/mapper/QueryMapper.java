@@ -9,11 +9,11 @@ import java.util.Map;
 /**
  * @Author wxy
  * @Date 19-9-25 下午2:35
- * @Description TODO 通用mapper接口
+ * @Description TODO mapper接口
  **/
 @Repository
-public interface BaseMapper {
+public interface QueryMapper {
 
-    @Select("SELECT * FROM test.tb_students_score;")
+    @Select("SELECT * FROM t_user;")
     List<Map<String, Object>> queryList();
 }

@@ -1,5 +1,6 @@
 package com.wxy.response;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 /**
@@ -8,16 +9,12 @@ import lombok.Data;
  * @Description 响应实体类
  **/
 @Data
+@AllArgsConstructor
 public class ApiResponse {
+
     private Integer code;
     private String msg;
     private Object data;
-
-    private ApiResponse(Integer code, String msg, Object data) {
-        this.code = code;
-        this.msg = msg;
-        this.data = data;
-    }
 
     private static final Integer SUCCESS_CODE = 1;
     private static final String SUCCESS_MSG = "SUCCESS";
